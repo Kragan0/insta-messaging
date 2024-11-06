@@ -1,0 +1,220 @@
+[21:44:26][PluginLoader][WARNING] Plugins directory not found.
+[21:44:26][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: https://gitlab.com/ap5vs/test-config/im-server-config/-/raw/main/test-config-4.yaml?ref_type=heads
+Configuration loading mode: FROM URL
+[21:44:26][NATTCore][INFO] Working directory path: C:\Users\alexg\Desktop\im-server-main
+[21:44:26][NATTCore][INFO] Start loading of the configuration file ...
+[21:44:27][NetworkIO][INFO] Yaml data has been loaded from network location (https://gitlab.com/ap5vs/test-config/im-server-config/-/raw/main/test-config-4.yaml?ref_type=heads)
+[21:44:27][NATTCore][INFO] Configuration loading done
+[21:44:27][NATTCore][INFO] Start building test structure according to the configuration ...
+[21:44:27][NATTCore][INFO] Test structure ...
+[21:44:27][NATTCore][INFO] Test structure building done
+[21:44:27][NATTCore][INFO] Start test executing ...
+[21:44:28][TestReportGenerator][INFO] Extenet reports generated. Final report will be saved to file: test_report.html
+[21:44:28][NATTCore][INFO] Starts execution on the root keyword  ...
+[21:44:28][MessageBuffer][INFO] Message buffer created for module with name: default
+[21:44:28][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar app/build/libs/app.jar 9999 10
+[21:44:28][ProcessManager][INFO] New PID (24136) added to file
+[21:44:28][WaitKw][INFO] Waiting: 3000 ms
+[21:44:28][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'IM server listening on port 9999, maximum nr. of connections=10...'
+[21:44:31][MessageBuffer][INFO] Message buffer created for module with name: client-1
+[21:44:31][TelnetClient][INFO] (client-1) Telnet client connected to host with the address: 'localhost' on port '9999'
+[21:44:31][MessageBuffer][INFO] Message buffer created for module with name: client-2
+[21:44:31][TelnetClient][INFO] (client-2) Telnet client connected to host with the address: 'localhost' on port '9999'
+[21:44:31][MessageBuffer][INFO] Message buffer created for module with name: client-3
+[21:44:31][TelnetClient][INFO] (client-3) Telnet client connected to host with the address: 'localhost' on port '9999'
+[21:44:31][WaitKw][INFO] Waiting: 2000 ms
+[21:44:33][TelnetClient][INFO] (client-1) Message send: Klient1
+[21:44:33][TelnetClient][INFO] (client-2) Message send: Klient2
+[21:44:33][TelnetClient][INFO] (client-3) Message send: Klient3
+[21:44:33][WaitKw][INFO] Waiting: 800 ms
+[21:44:33][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'Please enter your name: '
+[21:44:33][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'Please enter your name: '
+[21:44:33][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'Please enter your name: '
+[21:44:33][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'You are connected from /127.0.0.1:64125'
+[21:44:33][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'You are connected from /127.0.0.1:64123'
+[21:44:33][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'You are connected from /127.0.0.1:64124'
+[21:44:34][TestSuiteKw][INFO] Test case 'Zaklaní test komunikace 1' starts executing now
+[21:44:34][TelnetClient][INFO] (client-1) Message send: Hello, world!
+[21:44:34][WaitKw][INFO] Waiting: 1000 ms
+[21:44:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[Klient1] >> Hello, world!'
+[21:44:34][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: '[Klient1] >> Hello, world!'
+[21:44:34][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: '[Klient1] >> Hello, world!'
+[21:44:35][TestSuiteKw][INFO] Test suite 'Testování běžné komunikace' - Test case 'Zaklaní test komunikace 1' passed
+[21:44:35][MessageBuffer][INFO] Message buffer cleared
+[21:44:35][TestSuiteKw][INFO] Test case 'Zaklaní test komunikace 2' starts executing now
+[21:44:35][TelnetClient][INFO] (client-1) Message send: Testing 123
+[21:44:35][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: '[Klient1] >> Testing 123'
+[21:44:35][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: '[Klient1] >> Testing 123'
+[21:44:35][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[Klient1] >> Testing 123'
+[21:44:35][TelnetClient][INFO] (client-2) Message send: 12345 - 67890
+[21:44:35][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[Klient2] >> 12345 - 67890'
+[21:44:35][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: '[Klient2] >> 12345 - 67890'
+[21:44:35][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: '[Klient2] >> 12345 - 67890'
+[21:44:35][TelnetClient][INFO] (client-3) Message send: This is a test message
+[21:44:35][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[Klient3] >> This is a test message'
+[21:44:35][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: '[Klient3] >> This is a test message'
+[21:44:35][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: '[Klient3] >> This is a test message'
+[21:44:35][WaitKw][INFO] Waiting: 1000 ms
+[21:44:36][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: [Klient2] >> 12345 - 67890
+[21:44:36][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: [Klient3] >> This is a test message
+[21:44:36][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: [Klient1] >> Testing 123
+[21:44:36][TestSuiteKw][INFO] Test suite 'Testování běžné komunikace' - Test case 'Zaklaní test komunikace 2' passed
+[21:44:36][MessageBuffer][INFO] Message buffer cleared
+[21:44:37][TestSuiteKw][INFO] Test case 'Test odeslání soukromé zprávy' starts executing now
+[21:44:37][TelnetClient][INFO] (client-2) Message send: #sendPrivate Klient3 This is a private message
+[21:44:37][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: '[Klient2] >> This is a private message'
+[21:44:37][WaitKw][INFO] Waiting: 1000 ms
+[21:44:38][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: [Klient2] >> This is a private message
+[21:44:38][NATTContext][INFO] Data has been stored in to the variable 'var-2'. Data value: 
+[21:44:38][TestSuiteKw][INFO] Test suite 'Testování běžné komunikace' - Test case 'Test odeslání soukromé zprávy' passed
+[21:44:38][MessageBuffer][INFO] Message buffer cleared
+[21:44:39][MessageBuffer][INFO] Message buffer cleared
+[21:44:39][TestSuiteKw][INFO] Test case 'Test vstoupení do diskuzní místnosti' starts executing now
+[21:44:39][TelnetClient][INFO] (client-1) Message send: #join MyGroup1
+[21:44:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[Info] >> Joined group: MyGroup1'
+[21:44:39][TelnetClient][INFO] (client-2) Message send: #join MyGroup1
+[21:44:39][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: '[Info] >> Joined group: MyGroup1'
+[21:44:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[Info] >> Joined group: MyGroup1'
+[21:44:39][WaitKw][INFO] Waiting: 1000 ms
+[21:44:39][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: '[Info] >> Joined group: MyGroup1'
+[21:44:40][TelnetClient][INFO] (client-1) Message send: #groups
+[21:44:40][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[Info] >> Your groups: public, MyGroup1'
+[21:44:40][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: '[Info] >> Your groups: public, MyGroup1'
+[21:44:40][WaitKw][INFO] Waiting: 1000 ms
+[21:44:41][TelnetClient][INFO] (client-1) Message send: #leave public
+[21:44:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[Info] >> Left group: public'
+[21:44:41][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: '[Info] >> Left group: public'
+[21:44:41][TelnetClient][INFO] (client-2) Message send: #leave public
+[21:44:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[Info] >> Left group: public'
+[21:44:41][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: '[Info] >> Left group: public'
+[21:44:41][WaitKw][INFO] Waiting: 1000 ms
+[21:44:42][TelnetClient][INFO] (client-1) Message send: #groups
+[21:44:42][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[Info] >> Your groups: MyGroup1'
+[21:44:42][WaitKw][INFO] Waiting: 1000 ms
+[21:44:42][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: '[Info] >> Your groups: MyGroup1'
+[21:44:43][TestSuiteKw][INFO] Test suite 'Testování diskuzních místností' - Test case 'Test vstoupení do diskuzní místnosti' passed
+[21:44:43][MessageBuffer][INFO] Message buffer cleared
+[21:44:43][TestSuiteKw][INFO] Test case 'Test komunikace v diskuzní místnosti' starts executing now
+[21:44:43][TelnetClient][INFO] (client-1) Message send: This is private message
+[21:44:43][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[Klient1] >> This is private message'
+[21:44:43][WaitKw][INFO] Waiting: 1000 ms
+[21:44:43][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: '[Klient1] >> This is private message'
+[21:44:44][TelnetClient][INFO] (client-3) Message send: #join MyGroup1
+[21:44:44][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[Info] >> Joined group: MyGroup1'
+[21:44:44][WaitKw][INFO] Waiting: 1000 ms
+[21:44:44][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: '[Info] >> Joined group: MyGroup1'
+[21:44:45][TelnetClient][INFO] (client-1) Message send: This is private message
+[21:44:45][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: '[Klient1] >> This is private message'
+[21:44:45][WaitKw][INFO] Waiting: 1000 ms
+[21:44:45][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: '[Klient1] >> This is private message'
+[21:44:45][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[Klient1] >> This is private message'
+[21:44:47][TestSuiteKw][INFO] Test suite 'Testování diskuzních místností' - Test case 'Test komunikace v diskuzní místnosti' passed
+[21:44:47][MessageBuffer][INFO] Message buffer cleared
+[21:44:47][MessageBuffer][INFO] Message buffer cleared
+[21:44:47][TestSuiteKw][INFO] Test case 'Test změny jména' starts executing now
+[21:44:47][TelnetClient][INFO] (client-1) Message send: #setMyName NoveJmeno1
+[21:44:47][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[Info] >> Your name was set to: NoveJmeno1'
+[21:44:47][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: '[Info] >> Your name was set to: NoveJmeno1'
+[21:44:47][WaitKw][INFO] Waiting: 1000 ms
+[21:44:48][TelnetClient][INFO] (client-1) Message send: This is new message
+[21:44:48][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[NoveJmeno1] >> This is new message'
+[21:44:48][WaitKw][INFO] Waiting: 1000 ms
+[21:44:48][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: '[NoveJmeno1] >> This is new message'
+[21:44:48][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: '[NoveJmeno1] >> This is new message'
+[21:44:49][TestSuiteKw][INFO] Test suite 'Testování příkazu pro změnů jména' - Test case 'Test změny jména' passed
+[21:44:50][MessageBuffer][INFO] Message buffer cleared
+[21:44:50][TestSuiteKw][INFO] Test case 'Test změny na neunikátní jméno' starts executing now
+[21:44:50][TelnetClient][INFO] (client-1) Message send: #setMyName Klient2
+[21:44:50][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[Error] >> This username is already taken.'
+[21:44:50][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: '[Error] >> This username is already taken.'
+[21:44:50][WaitKw][INFO] Waiting: 1000 ms
+[21:44:51][TelnetClient][INFO] (client-1) Message send: This is new message
+[21:44:51][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[NoveJmeno1] >> This is new message'
+[21:44:51][WaitKw][INFO] Waiting: 1000 ms
+[21:44:51][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: '[NoveJmeno1] >> This is new message'
+[21:44:51][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: '[NoveJmeno1] >> This is new message'
+[21:44:52][TestSuiteKw][INFO] Test suite 'Testování příkazu pro změnů jména' - Test case 'Test změny na neunikátní jméno' passed
+[21:44:52][MessageBuffer][INFO] Message buffer cleared
+[21:44:53][MessageBuffer][INFO] Message buffer cleared
+[21:44:53][MessageBuffer][INFO] Message buffer cleared
+[21:44:53][ExternalProgramRunner][INFO] (default) Termiting external application
+[21:44:53][TelnetClient][WARNING] (client-2) Connection closed
+[21:44:53][TelnetClient][WARNING] (client-3) Connection closed
+[21:44:53][TelnetClient][WARNING] (client-1) Connection closed
+[21:44:53][ProcessManager][INFO] PID (24136) removed from file
+[21:44:53][TelnetClient][INFO] (client-1) Telnet client [client-1] terminated
+[21:44:53][ProcessManager][INFO] PID (24136) removed from file
+[21:44:53][TelnetClient][INFO] (client-2) Telnet client [client-2] terminated
+[21:44:53][TelnetClient][INFO] (client-3) Telnet client [client-3] terminated
+[21:44:53][NATTCore][INFO] Test executing finished
+[21:44:53][NATTCore][INFO] Start generating test report
+[21:44:53][ExternalProgramRunner][WARNING] (default) External application ends with error: 1
+[21:44:53][ExternalProgramRunner][WARNING] (default) Error message from external application: DBG>Input handler starting for /127.0.0.1:64123
+DBG>Output handler starting for /127.0.0.1:64123
+DBG>Input handler starting for /127.0.0.1:64124
+DBG>Output handler starting for /127.0.0.1:64124
+DBG>Output handler running for /127.0.0.1:64123
+DBG>Output handler running for /127.0.0.1:64124
+DBG>Input handler running for /127.0.0.1:64123
+DBG>Input handler running for /127.0.0.1:64124
+DBG>Input handler starting for /127.0.0.1:64125
+DBG>Output handler starting for /127.0.0.1:64125
+DBG>Output handler running for /127.0.0.1:64125
+DBG>Input handler running for /127.0.0.1:64125
+DBG>Message sent to /127.0.0.1:64124:[Klient1] >> Hello, world!
+
+DBG>Message sent to /127.0.0.1:64125:[Klient1] >> Hello, world!
+
+DBG>Message sent to /127.0.0.1:64124:[Klient1] >> Testing 123
+
+DBG>Message sent to /127.0.0.1:64125:[Klient1] >> Testing 123
+
+DBG>Message sent to /127.0.0.1:64123:[Klient2] >> 12345 - 67890
+
+DBG>Message sent to /127.0.0.1:64125:[Klient2] >> 12345 - 67890
+
+DBG>Message sent to /127.0.0.1:64123:[Klient3] >> This is a test message
+
+DBG>Message sent to /127.0.0.1:64124:[Klient3] >> This is a test message
+
+DBG>Message sent to /127.0.0.1:64125:[Klient2] >> This is a private message
+
+DBG>Message sent to /127.0.0.1:64123:[Info] >> Joined group: MyGroup1
+
+DBG>Message sent to /127.0.0.1:64124:[Info] >> Joined group: MyGroup1
+
+DBG>Message sent to /127.0.0.1:64123:[Info] >> Your groups: public, MyGroup1
+
+DBG>Message sent to /127.0.0.1:64123:[Info] >> Left group: public
+
+DBG>Message sent to /127.0.0.1:64124:[Info] >> Left group: public
+
+DBG>Message sent to /127.0.0.1:64123:[Info] >> Your groups: MyGroup1
+
+DBG>Message sent to /127.0.0.1:64124:[Klient1] >> This is private message
+
+DBG>Message sent to /127.0.0.1:64125:[Info] >> Joined group: MyGroup1
+
+DBG>Message sent to /127.0.0.1:64124:[Klient1] >> This is private message
+
+DBG>Message sent to /127.0.0.1:64125:[Klient1] >> This is private message
+
+DBG>Message sent to /127.0.0.1:64123:[Info] >> Your name was set to: NoveJmeno1
+
+DBG>Message sent to /127.0.0.1:64124:[NoveJmeno1] >> This is new message
+
+DBG>Message sent to /127.0.0.1:64125:[NoveJmeno1] >> This is new message
+
+DBG>Message sent to /127.0.0.1:64123:[Error] >> This username is already taken.
+
+DBG>Message sent to /127.0.0.1:64125:[NoveJmeno1] >> This is new message
+
+DBG>Message sent to /127.0.0.1:64124:[NoveJmeno1] >> This is new message
+
+
+[21:44:53][TestReportGenerator][INFO] Report saved to file
+[21:44:53][NATTCore][INFO] All test cases passed.
+[21:44:53][NATTCore][INFO] Final score: 10.000000
+[21:44:53][NATTCore][INFO] Testing done. Leaving status: PASSED
